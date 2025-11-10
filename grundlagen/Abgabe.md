@@ -8,3 +8,22 @@ Aufgabe 2:
 Beispiel SW-Mangel: Ein Kunde bestellt eine neue interne CRM-Software und fordert, dass alle Berichte maximal 5 Sekunden zum Laden benötigen. Nach der Auslieferung funktioniert die Berichterstellung zwar korrekt, benötigt aber bei großen Datensätzen 15 bis 20 Sekunden.
 
 Beispiel SW-Fehler: Der Ausfall des Handelssystems Knight Capital Group: Ein automatisiertes Hochfrequenz-Handelssystem des US-Finanzdienstleisters Knight Capital Group wurde mit neuem Code aktualisiert. Ein Deployment-Fehler führte dazu, dass älterer, fehlerhafter Code, der für Testzwecke gedacht war, im Produktionssystem aktiviert wurde.
+
+Aufgabe 3 Bonus:
+
+Dieser Code 
+```
+if (extras >= 3)
+    addon_discount = 10;
+else if (extras >= 5)
+    addon_discount = 15;
+```
+
+sollte zu:
+```
+if (extras >= 5)    
+    addon_discount = 15;    
+else if (extras >= 3)      
+    addon_discount = 10; 
+```
+werden
