@@ -1,5 +1,10 @@
 # 1 - Simpler Rechner
 
+<img width="1724" height="485" alt="image" src="https://github.com/user-attachments/assets/c52d3abc-2b1a-4c4c-abdf-1b1530e1a062" />
+
+<img width="2006" height="1119" alt="image" src="https://github.com/user-attachments/assets/15a6038a-0b47-44ed-9ccd-0a5cf129e616" />
+
+
 # 2 - JUnit Zusammenfassung
 ## Was ist JUnit
 JUnit ist ein Java Framework mit dem man Unit Tests schreibt und autamomatisch ausführt. Damit kann man einzelne Methoden testen um sicherzustellen dass sie genau das tun was sie sollen.
