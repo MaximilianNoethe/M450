@@ -32,5 +32,96 @@ https://www.vogella.com/tutorials/JUnit/article.html
 
 
 # 3 - Banken Simulation
+## Klassen und Zusammenhänge
+### Bank
+- Verwatungsklasse für alle Konten
+- Hält eine Liste von Account Objekten
+- Verantwortlich für:
+  - createAccount()
+  - deposit()
+  - withdraw()
+  - print()
+  - printBalance()
+- Beziehung:
+  - Bank -> hat viele -> Accounts (0..n)
+
+### Account
+- Repräsentiert ein allgemeines Bankkonto.
+- Attribute:
+  - balance: long
+  - id: String
+- Methoden:
+  - deposti()
+  - withdraw()
+  - canTransact()
+  - print()
+- Beziehung:
+  - Booking -> gehört zu -> Account
+  - SavingsAccount, SalaryAccount, PromoYoutSavingsAccount -> erben von -> Account
+
+### Booking
+- Repräsentiert eine einzelne Transaktion
+- Attribute:
+  - amount: long
+  - id: int
+- Methoden:
+  - print()
+- Wird von Account genutzt um Ein- und Auszahlungen zu protokollieren
+
+### SavingsAccount
+- Spezieller Kontotyp
+- Überschreibt:
+  - withdraw()
+
+### SalaryAccount
+- Lohnkonto
+- Überschreibt:
+  - print()
+  - withdraw()
+
+### PromoYouthSavingsAccount
+- Spezielles Jugend Sparkonto
+- Überschreibt:
+  - deposit()
+
+### BankUtils
+- Hilfsklasse für Formatierungen
+- Statische Kosntanten:
+  - AMOUNT_FORMAT: DecimalFormat
+  - TWO_DIGIT_FORMAT: DecimalFormat
+- Methoden:
+  - formatAmount()
+  - formatBankDate()
+- Wird von:
+  - Account
+  - Booking
+  - Bank
+  - usw.
+ 
+### AccountBalanceComparator & AccountInverseBalanceComparator
+- Sortierklassen um Konten nach Kontostand zu sortieren
+- Können für Reportings verwendet werden
+
+### Main
+- Einstiegspunkt
+- Initiaisiert eine Bank
+- Erstellt Beispielkonten
+- Ruft verschiedene Methoden der Bank auf
+
+### Ablauf
+1. Programmstart
+2. Bank wird erstellt
+3. Beispielkonten werden erstellt
+4. Benutzer fürt Aktion aus
+5. Jede Transaktion erzeugt eine Buchung Instanz
+6. Ausgabe und Formatierung erfolgt über BankUtils
+
+### Zusammenhänge
+- Bank: verwaltet Konten
+- Account: führt Buchungen aus
+- Booking: speichert Transaktionen
+- Verschiedene Accounttypen erben von Account und verändern einige Methoden
+- BankUtils: ist eine reine Hilfsklasse
+- Comporator Klassen: ermoglichen Sortieren von Konten
 
 # 4 - Unit-Tests implementieren
