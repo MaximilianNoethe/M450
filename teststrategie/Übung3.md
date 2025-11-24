@@ -9,11 +9,13 @@
 
 
 # White-Box Testfälle
-| ID  | Feature / Ziel                          | Vorbedingungen                                   | Eingabe / Schritte                                                                                                                                       | Erwartetes Resultat                                                                                                                                         |
-| 1  | `Account.deposit(double)`    | `amount > 0`, Startsaldo 100.00, `deposit(50)`                                                                    | `getBalance()` liefert 150.00.                                                                                    |
-| 2  | `Bank.createAccount`         | Mehrere Aufrufe mit verschiedenen Namen/Währungen                                                                  | Jedes Konto wird der internen `accounts`-Liste hinzugefügt, `id` hochgezählt.                                     |
-| 3 | `chooseAccount`                 | Eingabe `a`, `w`, `e`, `q`, Zahl, ungültige Strings testen                                                        | Je nach Eingabe korrekte Aktion (Liste anzeigen, Konto erstellen, Wechselkurs, Programm beenden, Fehlerausgabe). |
-| 4 | `getExchangeRate("CHF","USD")`     | HTTP-200, valides JSON                                                                                             | Rückgabewert entspricht `result` aus JSON, > 0.0.                                                                 |
+| ID | Feature / Ziel                 | Vorbedingungen                                     | Eingabe / Schritte                                   | Erwartetes Resultat                                                                                                   |
+|----|--------------------------------|-----------------------------------------------------|-------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
+| 1  | `Account.deposit(double)`      | `amount > 0`, Startsaldo 100.00                     | `deposit(50)` → danach `getBalance()` aufrufen        | `getBalance()` liefert **150.00**                                                                                       |
+| 2  | `Bank.createAccount`           | Mehrere Aufrufe mit verschiedenen Namen/Währungen    | Konto erstellen                                       | Jedes Konto wird zur internen `accounts`-Liste hinzugefügt; `id` wird korrekt hochgezählt                               |
+| 3  | `chooseAccount`                | Verschiedene Eingaben testen (`a`, `w`, `e`, `q`, Zahl, ungültige Strings) | Eingabe über Menü                                     | Je nach Eingabe richtige Aktion: Liste anzeigen, Konto erstellen, Wechselkurs abrufen, Programm beenden, Fehlermeldung |
+| 4  | `getExchangeRate("CHF","USD")` | HTTP-200, valides JSON                               | API-Call                                              | Rückgabewert entspricht `result` aus JSON und ist **> 0.0**                                                             |
+                                                               
 
 
 # Verbesserungen
