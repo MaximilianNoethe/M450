@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: recipe-planner-fronend-and-backend/recipe-planner-backend
+        working-directory: CI - CD Pipelines/Task 1/recipe-planner-fronend-and-backend/recipe-planner-backend
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -33,10 +33,10 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: jacoco-report
-          path: recipe-planner-fronend-and-backend/recipe-planner-backend/target/site/jacoco
+          path: CI - CD Pipelines/Task 1/recipe-planner-fronend-and-backend/recipe-planner-backend/target/site/jacoco
 
       - name: Upload Surefire reports
         uses: actions/upload-artifact@v4
         with:
           name: surefire-reports
-          path: recipe-planner-fronend-and-backend/recipe-planner-backend/target/surefire-reports
+          path: CI - CD Pipelines/Task 1/recipe-planner-fronend-and-backend/recipe-planner-backend/target/surefire-reports
