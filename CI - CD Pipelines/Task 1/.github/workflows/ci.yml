@@ -1,0 +1,42 @@
+name: build-test
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: recipe-planner-fronend-and-backend/recipe-planner-backend
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: "temurin"
+          java-version: "21"
+          cache: "maven"
+
+      - name: Build
+        run: mvn -B -DskipTests package
+
+      - name: Test
+        run: mvn -B test
+
+      - name: Upload JaCoCo report
+        uses: actions/upload-artifact@v4
+        with:
+          name: jacoco-report
+          path: recipe-planner-fronend-and-backend/recipe-planner-backend/target/site/jacoco
+
+      - name: Upload Surefire reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: surefire-reports
+          path: recipe-planner-fronend-and-backend/recipe-planner-backend/target/surefire-reports
