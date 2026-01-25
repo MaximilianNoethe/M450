@@ -4,6 +4,7 @@ import ch.tbz.recipe.planner.domain.Ingredient;
 import ch.tbz.recipe.planner.domain.Recipe;
 import ch.tbz.recipe.planner.domain.Unit;
 import ch.tbz.recipe.planner.mapper.RecipeEntityMapper;
+import ch.tbz.recipe.planner.repository.RecipeRepository;
 import ch.tbz.recipe.planner.service.RecipeService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
@@ -39,6 +40,9 @@ class RecipeControllerTest {
 
     @MockBean
     private RecipeEntityMapper mapper;
+
+    @MockBean
+    private RecipeRepository recipeRepository;
 
     @Test
     void getRecipes_returnsList() throws Exception {
