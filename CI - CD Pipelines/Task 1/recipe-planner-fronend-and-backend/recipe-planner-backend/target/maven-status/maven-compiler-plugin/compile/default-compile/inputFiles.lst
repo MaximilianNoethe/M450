@@ -1,0 +1,12 @@
+/Users/Max/TBZ/Modules/450/M450/CI - CD Pipelines/Task 1/recipe-planner-fronend-and-backend/recipe-planner-backend/src/main/java/ch/tbz/recipe/planner/domain/Unit.java
+/Users/Max/TBZ/Modules/450/M450/CI - CD Pipelines/Task 1/recipe-planner-fronend-and-backend/recipe-planner-backend/src/main/java/ch/tbz/recipe/planner/mapper/RecipeEntityMapper.java
+/Users/Max/TBZ/Modules/450/M450/CI - CD Pipelines/Task 1/recipe-planner-fronend-and-backend/recipe-planner-backend/src/main/java/ch/tbz/recipe/planner/service/RecipeService.java
+/Users/Max/TBZ/Modules/450/M450/CI - CD Pipelines/Task 1/recipe-planner-fronend-and-backend/recipe-planner-backend/src/main/java/ch/tbz/recipe/planner/domain/Ingredient.java
+/Users/Max/TBZ/Modules/450/M450/CI - CD Pipelines/Task 1/recipe-planner-fronend-and-backend/recipe-planner-backend/src/main/java/ch/tbz/recipe/planner/controller/RecipeController.java
+/Users/Max/TBZ/Modules/450/M450/CI - CD Pipelines/Task 1/recipe-planner-fronend-and-backend/recipe-planner-backend/src/main/java/ch/tbz/recipe/planner/repository/RecipeRepository.java
+/Users/Max/TBZ/Modules/450/M450/CI - CD Pipelines/Task 1/recipe-planner-fronend-and-backend/recipe-planner-backend/src/main/java/ch/tbz/recipe/planner/mapper/CommonMapperConfig.java
+/Users/Max/TBZ/Modules/450/M450/CI - CD Pipelines/Task 1/recipe-planner-fronend-and-backend/recipe-planner-backend/src/main/java/ch/tbz/recipe/planner/mapper/IngredientEntityMapper.java
+/Users/Max/TBZ/Modules/450/M450/CI - CD Pipelines/Task 1/recipe-planner-fronend-and-backend/recipe-planner-backend/src/main/java/ch/tbz/recipe/planner/domain/Recipe.java
+/Users/Max/TBZ/Modules/450/M450/CI - CD Pipelines/Task 1/recipe-planner-fronend-and-backend/recipe-planner-backend/src/main/java/ch/tbz/recipe/planner/entities/IngredientEntity.java
+/Users/Max/TBZ/Modules/450/M450/CI - CD Pipelines/Task 1/recipe-planner-fronend-and-backend/recipe-planner-backend/src/main/java/ch/tbz/recipe/planner/RecipePlannerApplication.java
+/Users/Max/TBZ/Modules/450/M450/CI - CD Pipelines/Task 1/recipe-planner-fronend-and-backend/recipe-planner-backend/src/main/java/ch/tbz/recipe/planner/entities/RecipeEntity.java

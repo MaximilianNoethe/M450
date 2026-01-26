@@ -1,0 +1,6 @@
+services:
+  recipe-planner-backend:
+    build:
+      context: ../Task 1/recipe-planner-fronend-and-backend/recipe-planner-backend
+    ports:
+      - "8080:8080"
