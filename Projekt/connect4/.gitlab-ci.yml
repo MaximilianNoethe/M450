@@ -1,0 +1,40 @@
+image: maven:3.8.5-openjdk-17
+
+stages:
+  - build
+  - test
+  - deploy
+
+variables:
+  MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository"
+
+cache:
+  paths:
+    - .m2/repository/
+
+build_job:
+  stage: build
+  script:
+    - mvn compile
+
+test_job:
+  stage: test
+  script:
+    - mvn test
+    - mvn jacoco:report
+  artifacts:
+    paths:
+      - target/site/jacoco/
+      - target/surefire-reports/
+    reports:
+      junit: target/surefire-reports/TEST-*.xml
+
+pages:
+  stage: deploy
+  script:
+    - mv target/site/jacoco/ public/
+  artifacts:
+    paths:
+      - public
+  only:
+    - main
