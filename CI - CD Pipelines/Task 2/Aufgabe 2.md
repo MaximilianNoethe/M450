@@ -22,7 +22,7 @@ cd "CI - CD Pipelines/Task 2"
 docker compose up --build
 ```
 
-## Beobachtungen & Probleme
+## Probleme
 - Wir hatten nur eine Lektion Zeit, daher blieb es beim einfachen Setup.
 - Die Pfade im Repo sind lang (Spaces im Ordnernamen) das war verwirrend.
 - Lokal musste Java/Maven korrekt eingerichtet sein und das hat viel Zeit gekostet.
